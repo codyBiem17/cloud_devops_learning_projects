@@ -15,9 +15,11 @@ for product_row in range(2, product_list.max_row + 1):
 
     # calculation of num of prod per supplier
     if supplier_name in products_per_supplier:
-        current_num_prod = products_per_supplier[supplier_name] + 1  # you can also use the 'get' function instead of []
+        current_num_products = products_per_supplier[supplier_name] + 1
+        # you can also use the 'get' function instead of [] to get value
+
         # assign new value to num of products
-        products_per_supplier[supplier_name] = current_num_prod
+        products_per_supplier[supplier_name] = current_num_products
     else:
         products_per_supplier[supplier_name] = 1
 
