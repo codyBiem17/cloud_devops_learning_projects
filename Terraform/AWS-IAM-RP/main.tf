@@ -1,11 +1,3 @@
-provider "aws" {
-  region = "us-west-2"
-  access_key = "AKIA3NSUQQ7NUWFOJM54" 
-  secret_key = "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"
-
-}
-
-
 resource "aws_iam_user" "admin-user" {
   name = "biemislam"
   tags = {
