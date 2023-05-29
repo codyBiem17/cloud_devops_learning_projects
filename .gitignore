@@ -15,4 +15,4 @@ Terraform/**/.tfstate.*
 
 crash.log
 crash.*.log
-
+*.log
