@@ -43,3 +43,17 @@ resource "aws_s3_bucket_policy" "finance-policy" {
   EOF
 
 }
+
+# create S3 buckets from module using for_each meta argument
+
+module "for_each_S3-buckets" {
+  source = "./modules/for_each_module" 
+  for_each = var.for_each_bucket_names
+  for_bucket_names = "${each.value}.iac"
+}
+
+# create S3 buckets form module using count met argument
+
+module "count_S3_buckets" {
+  source = "./modules/count_module"
+}
